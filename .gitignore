@@ -1,14 +1,3 @@
-# ---- legacy trees (kept on disk during refactor, deleted in Task 14) ----
-/nuc-th/
-/JesseDocs/
-/FSU_Research_Backup/
-/fsu_data/
-/fsu_code/
-/fsu_plots/
-/fsu_papers/
-/Papers/
-/Presentations/
-
 # ---- never commit: third-party copyrighted PDFs ----
 *.pdf
 !figures/*.pdf
