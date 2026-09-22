@@ -22,7 +22,7 @@ CA40_FSUGOLD = {
 
 @pytest.fixture(scope="module")
 def ca40_density(results_root):
-    path = results_root / "Density" / "Ca40_fsugold_nucleon_density.dat"
+    path = results_root / "densities" / "Ca40_fsugold_nucleon_density.dat"
     if not path.is_file():
         pytest.skip(f"missing reference density: {path}")
     return path
