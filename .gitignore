@@ -1,0 +1,52 @@
+# ---- legacy trees (kept on disk during refactor, deleted in Task 14) ----
+/nuc-th/
+/JesseDocs/
+/FSU_Research_Backup/
+/fsu_data/
+/fsu_code/
+/fsu_plots/
+/fsu_papers/
+/Papers/
+/Presentations/
+
+# ---- never commit: third-party copyrighted PDFs ----
+*.pdf
+!figures/*.pdf
+!thesis/mythesis.pdf
+
+# ---- large binary screenshots from the prototype era ----
+*.bmp
+*.pptx
+
+# ---- Python ----
+__pycache__/
+*.py[cod]
+*.egg-info/
+build/
+dist/
+.venv/
+venv/
+.pytest_cache/
+.ruff_cache/
+.ipynb_checkpoints/
+
+# ---- editor / OS litter ----
+.idea/
+.vscode/
+.DS_Store
+*~
+\#*\#
+*.bak
+* (Case Conflict).*
+
+# ---- LaTeX build artifacts ----
+thesis/build/
+*.aux
+*.log
+*.lof
+*.lot
+*.toc
+*.out
+*.synctex.gz
+*.fls
+*.fdb_latexmk
