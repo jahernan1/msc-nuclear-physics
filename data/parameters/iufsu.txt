@@ -1,0 +1,16 @@
+491.500000 782.5 763.000000000000 1e-08
+99.42663100 169.83492300 184.68773800 0.09170123685246166
+0.0 0.04600000 0.00029600 0.03000000 3.38080900
+20 28 1 10 70 0.00 10
+450 400 0 0
+0
+iufsu
+
+#--------------------------------
+ms mv mp mg
+gs gv gp gg
+lambdas lambdav lambda ks ka(Mev)
+Z N maxL maxK iterationNumber deformation nodesNumber
+Phi W B A
+Potential channel
+Model Name

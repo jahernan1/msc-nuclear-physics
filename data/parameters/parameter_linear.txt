@@ -1,0 +1,17 @@
+520.0 782.5 763.0 0.00000001
+109.63 190.43 65.23 0.09170123685246166
+0.0 0.0 0.0 0.0 0.0
+28 28 3 10 50 0.16 10
+450 400 0 0
+1
+-1 -1 -1
+
+
+#######
+ms mv mp mg
+gs gv gp gg
+lambdas lambdav lambda ks ka
+Z N maxL maxK iterationNumber deformation nodesNumber
+Phi W B A
+Potential channel
+modleName J L
