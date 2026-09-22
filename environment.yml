@@ -1,0 +1,14 @@
+name: nucth
+channels:
+  - conda-forge
+dependencies:
+  - python=3.11
+  - numpy>=1.26
+  - scipy>=1.11
+  - matplotlib>=3.8
+  - scikit-learn>=1.4
+  - jupyterlab>=4.0
+  - pytest>=8.0
+  - pip
+  - pip:
+      - -e .
