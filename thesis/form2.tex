@@ -1,0 +1,520 @@
+\chapter{Formalism}
+\label{chap:form}
+
+\begin{figure}
+\begin{center}
+\includegraphics[scale=.6]{figures/cevnsdiag}
+\end{center}
+\caption{The Feynman diagram for \cevns\ with $p_i$ and $q$ as the four-momenta and invariant momentum transfer.}
+\label{fig:cevnsdiag}
+\end{figure}
+
+\section{Coherent Elastic Neutrino Nucleus Scattering Cross Section}
+\label{sec:cevnsform}
+
+In this section we will derive the \cevns\ cross section for spinless nuclei. We derive the cross section in a model independent formalism using current conservation and Lorentz invariance. 
+
+\subsection{Important Relations}
+We will begin by introducing the two-body (i.e., $A+B\rightarrow C+D$), Lorentz invariant differential cross section from~\cite{aitchison:2003:gauge}:
+\begin{equation}\label{eq:invcross} 
+\frac{d\sigma}{dt} = \frac{1}{64\pi} \frac{1}{(p_1\cdot p_2)^{2}-m_1^2m_2^2} \langle \lvert \mathcal{M}\rvert ^{2}\rangle,
+\end{equation} 
+where $\langle \lvert \mathcal{M}\rvert ^{2}\rangle$ represents the squared amplitude averaged over initial spins and summed over final spins~\cite{griffiths:2004:introduction}, $p_1$ and $p_2$ are the 4-momenta of the incoming particles, and $t$ is the invariant Mandelstam variable representing the momentum transfer squared.
+
+In Section~\ref{sec:amplitude} we will derive the amplitude using Feynman rules. Following Figure~\ref{fig:cevnsdiag} we can construct the matrix elements and thus the polarized amplitude. We will need the vertex factor for the weak neutral interaction,
+\begin{equation}
+\frac{-ig_{z}}{2}\gamma ^{\mu}(c_{V}^{f}-c_{A}^{f}\gamma ^{5}) \xrightarrow{neutrino} \frac{-ig_z}{4}\gamma ^{\mu}(1-\gamma ^{5}), \label{eq:vertex} 
+\end{equation}
+where $g_z$ is the coupling to the Z-boson and can be written in terms of the weak and electromagnetic coupling($g_e = e\sqrt{4\pi}$),  and weak mixing angle:
+\begin{equation}\label{eq:zcoupling}
+g_z = \frac{g_w}{\cos \theta _w}=\frac{g_e}{\cos \theta _w \sin \theta _w}
+\end{equation}
+and the vector and axial coupling to any fermion, '$f$', can be written in terms of its weak isospin and mixing angle:
+\begin{gather}
+c_V^f=t_3^f-2Q_f\sin \theta _w, \\
+c_A^f=t_3^f.
+\end{gather}
+For any flavor neutrino it follows that $c_{A}=c_{V}=\frac{1}{2}$. We also need the spin-1 propagator for the Z-boson in the limit when the propagator mass is much larger than the momentum transfer~\eqref{eq:propagator},
+\begin{equation}
+\frac{-i[g_{\mu \nu}-q_{\mu}q_{\nu}/M_{z}^{2}]}{q^2-M_{z}^{2}}\xrightarrow{M_{z}^2\ \gg \ Q^2} \frac{i g_{\mu \nu}}{M_z},\label{eq:propagator}
+\end{equation}
+where $Q^2=- q_{\mu} q_{\nu}$ and $M_z$ is the mass of the Z-boson and can be written as 
+\begin{equation}\label{eq:zmass}
+M_z = \frac{M_w}{\cos \theta _w}.
+\end{equation}
+
+\subsection{Writing the Amplitude}
+\label{sec:amplitude}
+Now we can construct the polarized amplitude:%cite jorge
+\begin{align}
+-i\mathcal{M} &= \left[ \bar{u}(3)\frac{ig_{z}}{4}\gamma ^{\mu}(1-\gamma ^{5})u(1)\right] \left( \frac{-ig_{\mu \nu }}{M_{z}^{2}}\right) \left[ \frac{ig_{z}}{4}\langle p_4|\hat{J}^{\nu}_{w}|p_2 \rangle \right], \nonumber \\
+\mathcal{M} &= -\left( \frac{g_{z}^{2}}{16 M_{z}^{2}}\right) [\bar{u}(3)\gamma ^{\mu}(1-\gamma ^{5})u(1)][\langle p_4|\hat{J}_{\mu}^{wk}|p_2 \rangle],
+\label{eq:unpolarized}
+\end{align} 
+where $\hat{J}_{\nu}^{w}$ is the neutral current operator, and we have labeled the spinors with its respective particle momentum for simplicity, (e.g.\ $(1)$ represents $\nu (p_1)$), using Figure~\ref{fig:cevnsdiag}. 
+
+Using~\eqref{eq:unpolarized} we can now write down the unpolarized amplitude squared as,
+\begin{align}
+\langle |\mathcal{M}|^2 \rangle &=\left( \frac{g_z^2}{16M_z^2} \right) ^2 L^{\mu \nu}H_{\mu \nu} \nonumber \\
+&= \frac{G_F^2}{8} L^{\mu \nu}H_{\mu \nu}, \label{eq:polarized}
+\end{align}
+where we have introduced the Fermi constant,
+\begin{equation}
+G_F=\frac{1}{4\sqrt{2}}\left( \frac{g_w}{M_w}\right) ^2=\frac{1}{4\sqrt{2}}\left( \frac{g_z}{M_z}\right) ^2,
+\end{equation}
+and used~\eqref{eq:zcoupling} and~\eqref{eq:zmass} to relate the couplings and masses to the conventional quantities. In~\eqref{eq:polarized} we have introduced the leptonic tensor and the hadronic tensor as
+\begin{gather}
+L^{\mu \nu}= [\bar{u}(3)\gamma ^{\mu}(1-\gamma ^{5})u(1)][\bar{u}(3)\gamma ^{\nu}(1-\gamma ^{5})u(1)]^*, \label{eq:leptonic} \\
+H_{\mu \nu}= [\langle p_4|\hat{J}_{\mu}^{w}|p_2 \rangle][\langle p_4|\hat{J}_{\nu}^{w}|p_2 \rangle]^*. \label{eq:hadronic}
+\end{gather}
+Due to the fact that neutrinos and anti-neutrinos carry only left-handed or right-handed helicity respectively, one does not have to average over initial spins in~\eqref{eq:polarized}.
+
+\subsubsection{Derivation of nucleus transition amplitude}
+
+Next we will construct the general form of the transition amplitude for the outgoing nucleus using current conservation and Lorentz invariance. We will follow closely the example from~\cite{aitchison:2003:gauge} on the pion form factor. We know that the current is a 4-vector; therefore for the nucleus vertex in Figure~\ref{fig:cevnsdiag} we see that the only 4-vectors available are $p_2,\ p_4,\ $ and $q$, namely the outgoing 4-momentum and the momentum transfer. To conserve momentum we are constrained by $p_4=q+p_2$ and can construct two independent combinations:
+\begin{equation}
+\left( p_4+p_2 \right) _{\mu},\qquad
+\left( p_4-p_2 \right) _{\mu}=q_{\mu}.
+\end{equation}
+We identify that the only independent scalar at the vertex can be chosen to be $q^2$ because it can be written in terms of the scalar product of $p_4$ and $p_2$. It follows that we can multiply the 4-vector combination by a scalar function without losing its form. In order to model the finite structure of the nucleus we introduce the form factor in~\ref{eq:wkcurrent}. The form factor is a scalar function with respect to the independent variable. We are now ready to write the most general form for the weak transition current, namely,
+\begin{equation}\label{eq:wkcurrent}
+\langle p_4|\hat{J}_{\mu}^{w}|p_2 \rangle = F(Q^2)\left( p_4+p_2 \right) _{\mu}+G(Q^2)q_{\mu}.
+\end{equation} 
+Once we impose current conservation in momentum space,$q_{\mu}j_{w}^{\mu}=0$, as required, the second term in~\eqref{eq:wkcurrent} must vanish, i.e, $G(q^2)=0$. With these results we can now write the most general form for the neutral current,
+\begin{equation}\label{eq:wktrancurrent}
+\boxed{
+\langle p_4|\hat{J}_{\mu}^{w}|p_2 \rangle = Q_{w}F_{w}(Q^2)\left( p_4+p_2 \right) _{\mu}
+},
+\end{equation}
+with $q^2=-Q^2$, the form factor has been normalized as $F_{w}(0)=1$ and $Q_{wk}$, weak charge,
+\begin{equation}\label{eq:wkcharge}
+Q_{wk}=-N+Z(1-4\sin ^2\theta _w),
+\end{equation}
+where $N$ is the neutron number, $Z$ is the proton number, and $\theta _w$ is the weak mixing angle with, $ sin^2\theta _w = 0.231$.
+ 
+\subsection{Evaluating the Amplitude}
+We can use Casimir's Trick from~\cite{griffiths:2004:introduction} to write
+\begin{equation}\label{eq:casimir}
+\sum_{all\ spins}[\bar{u}(a)\Gamma _1 u(b)][\bar{u}(a)\Gamma _1 u(b)]^*=\mathrm{Tr}[\Gamma _1 (\slashed{p}_b+m_b)\bar{\Gamma}_2(\slashed{p}_a+m_a)],
+\end{equation} 
+where for our calculation it follows that
+\begin{gather}
+\Gamma _1=\gamma ^{\mu}(1-\gamma ^5),\label{eq:gamma1} \\
+\bar{\Gamma} _2 = \gamma ^0[\gamma ^{\nu}(1-\gamma ^5)]^\dagger \gamma ^0= \gamma ^{\nu}(1-\gamma ^5). \label{eq:gamma2}
+\end{gather}
+
+Now using~\eqref{eq:casimir},~\eqref{eq:gamma1} and~\eqref{eq:gamma2} and ignoring the neutrino masses, we can reduce the leptonic tensor into a single trace of the form
+\begin{equation}\label{eq:trace}
+L^{\mu \nu}= \mathrm{Tr}[\gamma ^{\mu}(1-\gamma ^5) \slashed{p}_1\gamma ^{\nu}(1-\gamma ^5)\slashed{p}_3].
+\end{equation}
+Evaluating~\eqref{eq:trace} the trace yields
+\begin{align}
+L^{\mu \nu} &= \mathrm{Tr}[\gamma ^{\mu}(1-\gamma ^5) \gamma ^{\sigma} p_{\sigma}^{(1)}\gamma ^{\nu}(1-\gamma ^5)\gamma ^{\lambda} p_{\lambda}^{(3)}] \nonumber 
+\\
+&= 2 p_{\sigma}^{(1)} p_{\lambda}^{(3)}\{ \mathrm{Tr}[\gamma ^{\mu}\gamma ^{\sigma}\gamma ^{\nu}\gamma ^{\lambda}]+\mathrm{Tr}[\gamma ^5 \gamma ^{\mu}\gamma ^{\sigma}\gamma ^{\nu}\gamma ^{\lambda}]\} \nonumber
+\\
+&= 2 p_{\sigma}^{(1)} p_{\lambda}^{(3)}\{ 4(g^{\mu \sigma}g^{\nu \lambda} - g^{\mu \nu}g^{\sigma \lambda} + g^{\mu \lambda}g^{\sigma \nu})+4i\epsilon^{\mu \sigma \nu \lambda}\}\nonumber
+\\
+&= 8 \left( p_1^{\mu}p_3^{\nu}-(p_1\cdot p_3) g^{\mu \nu}+p_1^{\nu}p_3^{\mu} +i p_{\sigma}^{(1)} p_{\lambda}^{(3)} \epsilon ^{\mu \sigma \nu \lambda} \right). \label{eq:leptontensor}
+\end{align}
+In turn, we can rewrite the hadronic tensor using~\eqref{eq:wktrancurrent} and $p_4=q+p_2$:
+\begin{align}
+H_{\mu \nu} &= Q_{w}^2 F_{w}^2[(p_4+p_2)_{\mu}(p_4+p_2)_{\nu}] \nonumber \\
+&= Q_{w}^2 F_{w}^2[4p_{\mu}^{(2)}p_{\nu}^{(2)}+2p_{\mu}^{(2)}q_{\nu}+2q_{\mu}p_{\nu}^{(2)} +q_{\mu}q_{\nu}].\label{eq:hadrontensor}
+\end{align}
+We can now impose the conservation of the leptonic current to further simplify the calculation, i.e.,
+\begin{equation}
+q_{\mu}L^{\mu \nu} = L^{\mu \nu}q_{\nu}=0.
+\end{equation}
+To adhere to the conservation of the leptonic current any term in~\eqref{eq:hadrontensor} that contains $q_{\mu}$ will be zero when contracted with the leptonic tensor. Therefore we can rewrite the hadronic effective tensor as:
+\begin{equation}\label{eq:effhadronic}
+H_{\mu \nu}^{eff}=4Q_{w}^2 F_{w}^2 p_{\mu}^{(2)}p_{\nu}^{(2)}.
+\end{equation}
+Now contracting the leptonic tensor~\eqref{eq:leptontensor} with the effective hadronic tensor~\eqref{eq:effhadronic} yields:
+\begin{align}
+L^{\mu \nu}p_{\mu}^{(2)}p_{\nu}^{(2)} &= 8(2p_1^{\mu}p_3^{\nu}-(p_1\cdot p_3)g^{\mu \nu})p_{\mu}^{(2)}p_{\nu}^{(2)} \nonumber \\
+&= 16(p_1\cdot p_2)(p_3\cdot p_2)-8(p_1\cdot p_3)p_2^2 \nonumber \\
+&= 16\left[ (p_1\cdot p_2)(p_3\cdot p_2)+\frac{q^2p_2^2}{4}\right]. \label{eq:contractlep}
+\end{align}
+where we omit the Levi-Civita term because it is anti-symmetric and thus will cancel after contraction and have replaced the dot product in the second term for simplicity, i.e., $q^2=(p_3-p_1)^2=-2p_3\cdot p_1$.
+
+\subsubsection{Evaluation in the lab frame}
+Now let's evaluate each term in~\eqref{eq:contractlep} in the lab frame with the nucleus initially at rest. That is,
+\begin{align}\label{eq:evalp1p2}
+p_1\cdot p_2 &= E_1M, 
+\\
+q^2 &=(p_4-p_2)^2 \nonumber \\
+&= 2M^2-2(p_4\cdot p_2)=2M^2-2ME_4 \nonumber \\
+&=-2MT, \label{eq:evalq}
+\\
+p_3\cdot p_2 &= (p_1+p_2-p_4)p_2= p_1\cdot p_2 +p_2^2 - p_4\cdot p_2 \nonumber \\ 
+&= E_1M+M^2-E_4M = M(E_1+M-E_4)\nonumber \\
+&=M(E_1-T),\label{eq:evalp3p2} 
+\end{align}
+where $M$ is the mass of the nucleus, $E_1$ is the incoming neutrino energy, and $T=E_4-M$ is the kinetic energy of the recoiling nucleus. To clarify we have used momentum conservation in~\eqref{eq:evalp3p2} to replace $p_3$. 
+
+\subsection{Evaluating the Cross-Section}
+
+We can evaluate~\eqref{eq:contractlep} in the lab frame using~\eqref{eq:evalp1p2},~\eqref{eq:evalq},~\eqref{eq:evalp3p2}, i.e.,
+\begin{equation}
+L^{\mu \nu}p_{\mu}^{(2)}p_{\nu}^{(2)} = 8M^2 \left[ 2E(E-T)-MT \right],
+\end{equation}
+and then use this result with~\eqref{eq:effhadronic} to evaluate the unpolarized amplitude:
+\begin{equation}\label{eq:matrixelmt}
+\langle |\mathcal{M}|^2 \rangle = 4G_F^2M^2 \left[ 2E(E-T)-MT \right] Q_{w}^2 F_{w}^2(Q^2).
+\end{equation}
+Plugging in~\eqref{eq:matrixelmt} into~\eqref{eq:invcross} gives us the invariant cross section:
+\begin{equation}
+\frac{d\sigma}{dt} = \frac{1}{16\pi} \frac{G_F^2M^2}{E^2}\left[ 2E(E-T)-MT \right] Q_{w}^2 F_{w}^2(Q^2).
+\end{equation}
+We can finally write the cross section in terms of the recoil energy, $T$, making the substitution for $t$ using~\eqref{eq:evalq} to get our final result:
+\begin{equation}\label{eq:cevnsdiffcross}
+\boxed{
+\frac{d\sigma}{dT} = \frac{G_F^2}{8\pi}M \left[ 2\left(1-\frac{T}{E}\right) - \frac{MT}{E^2} \right] Q_{w}^2 F_{w}^2(Q^2)
+}.
+\end{equation}
+It follows that because $ \sin^2\theta _w \approx \frac{1}{4} $, the second term in~\eqref{eq:wkcharge} will be very small, and we get the $ \sim N^2 $ enhancement we discussed in Chapter~\ref{chap:intro}. We see from~\eqref{eq:cevnsdiffcross} that we need to calculate the weak form factor to make predictions on the cross section. The calculation of the form factor is model-dependent and will be discussed in the following section. The total cross section is
+\begin{equation}\label{eq:totcross}
+\boxed{
+\sigma = \frac{G_F^2}{8\pi}M Q_{w}^2 \int_{T_{min}}^{ T_{max}}\left[ 2 \left( 1- \frac{T}{E} \right) -\frac{MT}{E^2} \right] F_{w}^2(Q^2) dT
+},
+\end{equation} 
+where $Q^2=2MT$, $T_{min}$ is the minimum recoil detectable and 
+\begin{equation}
+T_{max}=\frac{2E^2}{2E+M},
+\end{equation}
+represents the maximum recoil energy. Next we will cover our methods to get the weak form factor in order to calculate the cross-section. 
+
+\section{The Form Factor}
+
+The form factor encodes the spacial properties and thus internal structure of the object, e.g., the charge structure in a nucleus from electron scattering. In the preceding discussion the nuclear form factor and the single nucleon form factor will need to be interpreted and understood. The nuclear form factor describing the nucleon distributions will be calculated taking the nucleons as point particles. We will then discuss how we can input the finite nucleon structure using the single-nucleon form factors to construct the electromagnetic and electroweak nuclear form factors.
+
+\subsection{Single-Nucleon Form Factor}
+\label{sec:nucleonff}
+
+The single nucleon form factor can be constructed from the electromagnetic and weak currents and will be discussed briefly in this section. We can write down the most general and covariant form of the single nucleon electromagnetic current from~\cite{horowitz:2012:impact} as:
+\begin{gather}
+\hat{J}^{\mu}_{EM} = F_1(Q^2)\gamma ^{\mu} +iF_2(Q^2)\sigma ^{\mu \nu}\frac{q_{\nu}}{2M_n},\label{eq:EMcurrent} \\
+\hat{J}^{\mu}_{NC} = \widetilde{F}_1(Q^2)\gamma ^{\mu} +i\tilde{F}_2(Q^2)\sigma ^{\mu \nu}\frac{q_{\nu}}{2M_n},
+\end{gather}
+where $F_1$($\tilde{F}_1$) and $F_2$($\tilde{F}_2$) are the Dirac and Pauli electromagnetic(electroweak) form factors respectively, and $M_n$ is the nucleon mass. It is more useful to introduce the electric and magnetic Sachs form factors; written as linear combinations of the Dirac and Pauli form factors, namely:
+\begin{gather}
+G_E(Q^2)=F_1(Q^2)-\tau F_2(Q^2), \\
+G_M(Q^2)=F_1(Q^2)+F_2(Q^2),
+\end{gather}
+where $\tau = \frac{Q^2}{4M_n^2}$. We can now rewrite the Dirac and Pauli form factors in terms of the Sachs' form factors:
+\begin{gather}
+F_1(Q^2)=G_E(Q^2) + \left( \frac{\tau}{1+\tau} \right)(G_M(Q^2) - G_E(Q^2)),\label{eq:diracFF} \\
+F_2(Q^2)=\frac{G_M(Q^2)-G_E(Q^2)}{1+\tau}.\label{eq:pauliFF}
+\end{gather} 
+Plugging~\eqref{eq:diracFF} and~\eqref{eq:pauliFF} into the electromagnetic current~\eqref{eq:EMcurrent} yields the electromagnetic current in terms of the Sachs' form factors:
+\begin{equation}
+\hat{J}^{\mu}_{EM}=G_E(Q^2)\gamma ^{\mu} + \left( \frac{G_M(Q^2)-G_E(Q^2)}{1+\tau} \right) \left[ \tau \gamma ^{\mu} + i\sigma^{\mu \nu} \frac{q_{\nu}}{2M_n} \right] \approx G_E(Q^2)\gamma ^{\mu}.\label{eq:EMcurrent2}
+\end{equation}
+We conclude that the term in brackets in~\eqref{eq:EMcurrent2} is very small and thus we will only need to use the electric Sachs form factor to elucidate the structure of the nucleons. 
+
+\begin{table}
+\caption{The experimental values used to construct the single-nucleon form factors. Showing the magnetic moment in Bohr magneton units, the point-nucleon mean square radii in ($fm^2$) units and the weak vector charge of the proton and neutron with radiative corrections.}
+\label{table:ffparameters}
+\begin{center}
+\def\arraystretch{1.25}
+\begin{tabular}{ c c | c c | c c }
+\hhline{==|==|==}  
+$\mu _p$ & $\mu _n$ & $r_p^2$ & $r_n^2$  & $g_v^p $ & $g_v^n $\\ 
+\hline 
+$2.793$ & $-1.913$ & $0.769 (fm^2)$ & $-0.116 (fm^2)$ &  $0.0712$ & $-0.9877$ \\
+\hhline{==|==|==}
+\end{tabular}
+\end{center} 
+\end{table}
+
+\subsubsection{Electromagnetic Form Factor}
+The electric Sachs single-nucleon form factor is modeled using a simple dipole parametrization:
+\begin{equation}
+G_D(Q^2) = \left( 1+\frac{Q^2}{12}r_p^2 \right) ^{-2},
+\end{equation}
+where $r_p^2$ is the mean square proton radius. This is valid for moderate values of momentum transfer. We define the electric proton form factor as,
+\begin{equation}
+G_E^p(Q^2) = \frac{G_M^p(Q^2)}{\mu _p} = \frac{G_M^n(Q^2)}{\mu _n}= G_D(Q^2),
+\end{equation}
+where $\mu _p$ and $\mu _n$ are the magnetic moment of the proton and neutron respectively. The Galster parametrization~\cite{kelly:2002:nucleon} is used to model the neutron electric form factor, i.e.,
+\begin{equation}
+G_E^n(Q^2)= -\left( \frac{Q^2r_n^2/6}{1+Q^2/M_n^2} \right) G_D(Q^2),
+\end{equation}
+where $r_n^2$ is the mean square neutron radius. The values used for the mean square radii and the magnetic moments are given in Table~\ref{table:ffparameters}. Note that due to the nature of the strong interaction, the value of $r_n^2$, the neutron form factor is small compared to the proton form factor.
+
+\subsubsection{Electroweak Form Factor}
+Next, using the underlying quark vector currents,
+\begin{gather}
+\hat{J}_{EM}^{\mu}= \sum _{f=1}^{3} Q_f \bar{q}_f \gmu q_f =\frac{2}{3}\bar{u}\gmu u -\frac{1}{3}\bar{d}\gmu d-\frac{1}{3}\bar{s}\gmu s, \label{eq:quarkem}  \\
+\hat{J}_{NC}^{\mu}= \sum _{f=1}^{3} g_V^f \bar{q}_f \gmu q_f =g_V^u \bar{u}\gmu + g_V^d \bar{d}\gmu d + g_V^s\bar{s}\gmu s, \label{eq:quarknc}
+\end{gather}
+the electromagnetic form factors can be related to the electroweak form factors. The weak vector charge in~\eqref{eq:quarknc} is related to the weak isospin and mixing angle of the fermion, '$f$':
+\begin{equation}
+g_V^f= 2t_3^f - 4 Q_f \sin \theta _w.
+\end{equation}  
+We can build the relation we discussed above by noting isospin symmetry; this says that the up(down) distribution of quarks in the proton is the same as the down(up) distribution in the neutron. For simplicity, the strange quark contribution will be omitted because the strange form factor is very small and can be ignored in our calculations. With that being said we can construct the matrix elements for the neutrons and protons using~\eqref{eq:quarkem} for the charged current,
+\begin{equation}\label{eq:matrixem}
+\begin{aligned}
+J^{\mu}_{EM,p} &= \langle p|\hat{J}^{\mu}_{EM}|p \rangle = \frac{2}{3} V_u^{\mu} - \frac{1}{3} V_d^{\mu},
+\\    
+J^{\mu}_{EM,n} &= \langle n|\hat{J}^{\mu}_{EM}|n \rangle = \frac{2}{3} V_d^{\mu} - \frac{1}{3} V_u^{\mu},
+\end{aligned}
+\end{equation}
+and~\eqref{eq:quarknc} for the neutral current,
+\begin{equation}\label{eq:matrixnc}
+\begin{aligned}
+J^{\mu}_{NC,p} &= \langle p|\hat{J}^{\mu}_{NC}|p \rangle = g_V^u V_u^{\mu} - g_V^d V_d^{\mu},
+\\    
+J^{\mu}_{NC,n} &= \langle n|\hat{J}^{\mu}_{NC}|n \rangle = g_V^u V_d^{\mu} - g_V^d V_u^{\mu},
+\end{aligned}
+\end{equation}
+where $V_{\lbrace u,d \rbrace}^{\mu}$ represents the matrix element of the vector current for the respective quark. We can now use~\eqref{eq:matrixem} to write the quark current matrix elements in terms of the charge currents and plug those back into~\eqref{eq:matrixnc} to get the neutral currents in terms of the charge currents,i.e.,
+\begin{equation}\label{eq:ncinem}
+\begin{aligned}
+J^{\mu}_{NC,p} &= g_V^p J^{\mu}_{EM,p} + g_V^n J^{\mu}_{EM,n},
+\\
+J^{\mu}_{NC,n} &= g_V^n J^{\mu}_{EM,p}+  g_V^p J^{\mu}_{EM,n},
+\end{aligned}
+\end{equation}
+where we have given the values of $g_V^p$ and $g_V^n$ in Table~\ref{table:ffparameters} and defined them as,
+\begin{equation}
+g_V^p = 2g_V^u+g_V^d,\quad g_V^n = g_V^u + 2g_V^d.
+\end{equation}
+Finally, we can rewrite~\eqref{eq:ncinem} in terms of the single-nucleon electric Sachs form factors using~\eqref{eq:EMcurrent2},
+\begin{equation}\label{eq:ncsingleff}
+\boxed{
+\begin{aligned}
+\widetilde{G}_E^p(Q^2)= g_V^p G_E^p(Q^2) + g_V^n G_E^n(Q^2),
+\\
+\widetilde{G}_E^n(Q^2)= g_V^n G_E^p(Q^2) + g_V^p G_E^n(Q^2).
+\end{aligned}
+}
+\end{equation}
+Note that due to the strength of the weak vector proton charge, $g_V^p$, and the neutron electric form factor, $G_E^n$, we discussed in the previous section the weak proton Sachs form factor, $\widetilde{G}_E^p(Q^2)$, is much smaller than the weak neutron Sachs form factor, $\widetilde{G}_E^n(Q^2)$. 
+
+\begin{figure}
+\begin{center}
+\includegraphics[width=\textwidth]{figures/singleNucleonFF}
+\end{center}
+\caption{(\textbf{A}) The single-nucleon electric Sachs form factor for the charge distribution. The inset is meant to show the structure of the neutron charge distribution.(\textbf{B}) The single-nucleon electric Sachs form factor for the weak charge distribution. The inset is meant to show the structure of the proton weak distribution.}
+\label{fig:singlenucleonFF}
+\end{figure}
+
+\subsection{Nuclear Form Factors}
+\label{sec:nuclearff}
+
+The nuclear form factor for point like nucleons are defined as the Fourier transform of the given nucleon density and is written as
+\begin{equation}\label{eq:genff}
+F_{n,p}(Q^2)=\int d^3\mathbf{r}\ e^{-i\mathbf{Q\cdot r}}\rho_{n,p}(\mathbf{r}).
+\end{equation}
+For our purposes,~\eqref{eq:genff} can be simplified assuming an spherically symmetric object: 
+\begin{equation}\label{eq:pointnuclearff}
+F_{n,p}(Q^2)=\int r^2 dr\left[ \frac{4\pi \sin Qr}{Qr}\right] \rho_{n,p}(r),
+\end{equation}
+where 'n' and 'p' subscripts identify the neutron and proton form factors respectively. The nucleon density is the vector part of the nuclear density and constructed from the occupied single particle states, namely,
+\begin{equation}
+\rho _{n,p}(r)=\rho^{n,p} _{v}(r) = \sum^{occ}_{\kappa} \left( \frac{2j_{\kappa} + 1}{4\pi r^2} \right) [g_{\kappa,\lbrace n,p\rbrace}^2(r)+f_{\kappa,\lbrace n,p\rbrace}^2(r)],
+\end{equation}
+where $g_{\kappa,\lbrace n,p\rbrace}(r)$ and $f_{\kappa,\lbrace n,p\rbrace}(r)$ are the upper and lower component of the Dirac spinor and $\kappa$ is the generalized angular momentum conserved quantum number; these will be discussed further in the next section.
+
+Using the appropriate single-nucleon form factors we account for the finite structure of the nucleons and can construct the charge and weak nuclear form factors, namely,
+\begin{gather}
+F_{ch}(Q^2) = F_n(Q^2)G_E^n(Q^2) + F_p(Q^2)G_E^p(Q^2) \approx F_p(Q^2)G_E^p(Q^2), 
+\\
+F_{w}(Q^2) = F_n(Q^2)\widetilde{G}_E^n(Q^2) + F_p(Q^2)\widetilde{G}_E^p(Q^2) \approx F_n(Q^2)\widetilde{G}_E^n(Q^2),
+\end{gather}
+where $G_E(\widetilde{G}_E)$ is the electromagnetic(electroweak) single-nucleon form factor. Note that the charge form factor is dominated by the proton distributions because it is extremely suppressed by the neutron electric form factor, $G_E^n$\ and conversely the weak form factor is dominated by the neutron distributions and extremely suppressed by the proton weak form factor, $\widetilde{G}_E^p$. This is graphically represented in Figure~\ref{fig:singlenucleonFF}. Note that this is why the weak interaction is needed to better fulfill our understanding of the neutron distributions.
+
+We can now write the relation for the nuclear density in real space. This is much more intuitive and tells us the distribution of the charge for the protons and neutrons in the nucleus. The nuclear density is the inverse Fourier transform of the nuclear form factors when the momentum transfer is small: 
+\begin{equation}\label{eq:density}
+\rho _w(r) = \frac{1}{2\pi ^2}\frac{1}{r}\int _0^{\infty} q \sin (qr) F_{w}(Q^2) dq.
+\end{equation}
+One finds the nucleon and weak charge densities by inputting the respective form factor into~\eqref{eq:density}. 
+
+\subsubsection{Form Factor Expansion}
+
+It is useful to expand the form factor~\eqref{eq:pointnuclearff} generally about small values of $Q^2$ to understand the physical interpretation and model dependence, i.e., 
+\begin{gather}
+F_w(Q^2) = \frac{4\pi}{Q_w} \int_0^{\infty} r^2dr\left[ \left( 1-\frac{Q^2}{6}r^2+\frac{Q^4}{120}r^4 -\cdots \right) \right] \rho_w(r), \nonumber
+\\
+F_w(Q^2) \approx 1-\frac{Q^2}{6}\langle R_w^2 \rangle
+\end{gather}
+where we have rewritten the expansion in terms of the moments of the density distribution 
+\begin{equation}\label{eq:rootmean}
+\langle R_w^n \rangle = \frac{1}{Q_w} \int_0^{\infty} r^{n+2}\rho _w(r)dr,
+\end{equation} 
+which can be experimentally determined, and have normalized the form factor to $F(0)=1$ by convention. We see that at small $Q^2$ values the form factor is dominated by the mean-square of the radius. The model dependence of the cross section we derived in Section~\ref{sec:nuclearff} can be interpreted in terms of the mean-square radii and will be discussed further in the next section.
+
+\section{Mean Field Approximation}
+
+We use a relativistic mean field approximation to model the behavior of the neutrons and protons within the nucleus. The mean field approach allows us to model the complex many-body problem using the individual nucleon bound states. In the following discussion, we will show our relativistic mean field approach to calculate the point-nucleon densities, and in turn the nuclear form factors. 
+
+In order to model the complex interactions for the ground state of the nucleus an effective Lagrangian, that has been extensively researched and refined in the literature, is introduced~\cite{todd:2003:relativistic, muller:1996:relativistic, utama:2016:nuclear} 
+\begin{equation}\label{eq:efflagrange}
+\begin{aligned}
+\mathcal{L}_{eff} &= \bar{\psi} \left[ \gmu\left( i\partial _{\mu} - g_v V_{\mu} - \frac{g_{\rho}}{2} \boldsymbol{\tau}\cdot \mathbf{b}_{\mu} - \frac{e}{2}(1-\tau _3)A_{\mu}\right) -(M-g_s\phi )\right]\psi 
+\\
+&+ \frac{1}{2} \left( \partial ^{\mu}\phi\partial _{\mu}\phi - m_s^2\phi ^2 - \frac{1}{2}V^{\mu\nu}V_{\mu\nu} +m_v^2 V^{\mu}V_{\nu} - \frac{1}{2} \mathbf{b}^{\mu\nu}\cdot\mathbf{b}_{\mu\nu} + m_{\rho}^2\mathbf{b}^{\mu}\cdot\mathbf{b}_{\mu}-\frac{1}{2}F^{\mu\nu}F_{\mu\nu}\right) 
+\\
+&- \frac{\kappa}{3!}(g_s\phi)^3+\frac{\lambda}{4!}(g_v V_{\mu})^4-\frac{\zeta}{4!}g_v^4(V_{\mu}V^{\nu})^2-[\Lambda _s (g_s\phi)^2 + \Lambda _v (g_v^2V_{\mu}V^{\mu})](g_{\rho}^2\mathbf{b}_{\mu}\cdot\mathbf{b}^{\mu}),
+\end{aligned}
+\end{equation}
+where $\psi$ represents the iso-doublet nucleon field, $A^{\mu}$ is the photon field, $\phi$ is the iso-scalar scalar field for the $\sigma$-meson, $V^{\mu}$ is the iso-scalar vector field for the $\omega$-meson, and $\mathbf{b}^{\mu}$ is the iso-vector vector field for the $\rho$-meson. The first, second and third lines in~\eqref{eq:efflagrange} represent the Yukawa couplings between the nucleons and mesons, and the linear and non-linear self and mixed interactions respectively. The third line of the effective Lagrangian is used to model the complex many-body interactions with a few parameters that are fit to the bulk properties of nuclei. The list of parameters for the class of models is represented in Table~\ref{table:params}. 
+
+\def\arraystretch{1.2}
+\begin{table}
+\caption{Parameters}
+\label{table:params}
+\centering
+\resizebox{\textwidth}{!}{
+\begin{tabular}{l|cccccccc}
+\hline\hline
+Model     & $m_s$    & $g_s$    & $g_v$    & $g_{\rho}$ & $\kappa$ & $\lambda$  & $\zeta$ & $\Lambda _v$ \\ 
+\hline
+FsuGold   & 491.5000 & 112.1995 & 204.5469 & 138.4701 & 1.4203 & 0.02376   & 0.06 & 0.03 \\
+\hline
+FsuGarnet & 496.9394 & 110.3494 & 187.6954 & 192.9255 & 3.2601 & -0.003551 & 0.02349 & 0.04337 \\
+\hline
+Rmf022    & 497.5871 & 109.3475 & 185.5452 & 127.1647 & 3.1692 & -0.002785 & 0.02346 & 0.02596 \\
+\hline
+Rmf028    & 496.8060 & 106.8497 & 181.4635 & 79.7094 & 3.1017 & -9.8592e-4 & 0.02559 & 8.008e-4 \\ 
+\hline
+Rmf032    & 494.4309 & 117.8061 & 208.6110 & 92.4873 & 2.5067 & 0.001578 & 0.02745 & 4.0384e-4 \\ 
+\hline 
+TamuFsuA  & 502.2000 & 106.5045 & 176.1779 & 97.3556 & 3.1824 & -0.003470 & 0.02 & 0.01267 \\ 
+\hline
+TamuFsuC  & 496.8000 & 113.9564 & 198.0546 & 103.4000 & 2.6078 & -0.001864 & 0.02 & 0.00 \\
+\hline\hline
+\end{tabular}}
+\end{table}
+
+For the calculation that was done for this report it was useful to rewrite the fields described in~\eqref{eq:efflagrange} into its single-nucleon scalar and vector potentials for the spherically symmetric system
+\begin{align}
+S_p(r) &= -g_s\phi (r),& V_p(r) &= g_v V(r)+ \frac{g_{\rho}b(r)}{2} + A(r), \\
+S_n(r) &= -g_s\phi (r),& V_n(r) &= g_v V(r)- \frac{g_{\rho}b(r)}{2}, 
+\end{align}
+where $\phi (r)$, $V(r)$, $b(r)$ and $A(r)$ are the fields in the ground state mean-field limit~\cite{todd:2003:relativistic}. These single-nucleon potentials will be used in the following section to calculate the single-nucleon occupied energy levels and wave functions.
+
+\subsection{Dirac Equation}
+
+We will begin by evaluating the Dirac equation for single nucleon vector and scalar potentials for the protons and neutrons separately by solving the eigenvalues for the Hamiltonian:
+\begin{equation}\label{eq:dirac}
+\left( \boldsymbol{\alpha}\cdot \mathbf{p}+\beta [m+S_{\lbrace n,p\rbrace}(r)] \right) \Psi (\mathbf{x}) = \left[ E-V_{\lbrace n,p\rbrace}(r) \right] \Psi (\mathbf{x})
+\end{equation}
+where the scalar and vector potentials transform like a Lorentz scalar and time-component of a four-vector respectively, and $\boldsymbol{\alpha}$ and $\beta$ are matrices defined as,
+\begin{equation}
+\boldsymbol{\alpha} = 
+\begin{pmatrix}
+0 & \boldsymbol{\sigma} \\
+\boldsymbol{\sigma} & 0
+\end{pmatrix}, \quad 
+\beta = 
+\begin{pmatrix}
+\mathbb{I} & 0 \\
+0 & -\mathbb{I}
+\end{pmatrix},
+\end{equation}
+where $\boldsymbol{\sigma}$ represents the Pauli matrix and $\mathbb{I}$ represents the identity matrix. We can write the single-particle solutions to~\eqref{eq:dirac} as,
+\begin{equation}\label{eq:Psi}
+\Psi_{n\kappa m}(\mathbf{x}) =
+\begin{bmatrix}
+\psi _a \\
+\psi _b
+\end{bmatrix}
+= \frac{1}{r}
+\begin{bmatrix}
+g_{n\kappa}(r)\mathcal{Y}_{\kappa m}(\hat{\mathbf{x}}) \\
+i f_{n\kappa}\mathcal{Y}_{-\kappa m}(\hat{\mathbf{x}})
+\end{bmatrix},
+\end{equation} 
+where $n$ and $m$ are the principal and magnetic quantum numbers respectively, and
+\begin{equation*}
+\mathcal{Y}_{\kappa m}(\hat{\mathbf{x}})= \langle \hat{\mathbf{x}}| l\frac{1}{2}j m \rangle, 
+\qquad
+\kappa = \pm \left( j+\frac{1}{2} \right),
+\qquad
+l = 
+\begin{cases}
+\kappa & \text{if } \kappa < 0 \\
+-1-\kappa & \text{if } \kappa > 0 
+\end{cases}
+\end{equation*}
+are the spin-angular functions, generalized angular momentum quantum number, and cases for the angular momentum quantum number respectively. Note that the upper and lower two-component wave functions will carry different but conserved angular momentum as opposed to the Dirac four-component spinor, which mixes angular momentum. Note in~\eqref{eq:Psi} the phase convention assures that $g(r)$ and $f(r)$ are real bound-state wave functions and we use the spin-angular functions because $\Psi(\hat{\mathbf{x}})$ has a definite parity~\cite{sakurai:1987:advanced}. The normalization condition is as follows,
+\begin{equation}
+\int _0^{\infty} dr[g_{n\kappa}^2(r)+f_{n\kappa}^2(r)]=1.
+\end{equation}
+We are now ready to rewrite~\eqref{eq:dirac} using~\eqref{eq:Psi}, i.e.,
+\begin{equation}
+\begin{pmatrix}
+m+S(r) & \boldsymbol{\sigma} \cdot \mathbf{p} \\
+\boldsymbol{\sigma} \cdot \mathbf{p} & -m-S(r)
+\end{pmatrix}
+\begin{bmatrix}
+\psi _a \\
+\psi _b
+\end{bmatrix}
+=
+\begin{pmatrix}
+E-V(r) & 0 \\
+0 & E-V(r)
+\end{pmatrix}
+\begin{bmatrix}
+\psi _a \\
+\psi _b
+\end{bmatrix},
+\end{equation}
+and separate it into two first order equations:
+\begin{equation}\label{eq:dirac1}
+\begin{gathered}
+\left[ E-V(r)-m-S(r) \right]\psi _a - \boldsymbol{\sigma} \cdot \mathbf{p}\ \psi _b = 0, 
+\\
+\left[ E-V(r)+m+S(r)\right]\psi _b - \boldsymbol{\sigma} \cdot \mathbf{p}\ \psi _a = 0.
+\end{gathered}
+\end{equation}
+Now we need to evaluate the dot product between the Pauli matrix and momentum. Using the Pauli matrix relations 
+\begin{equation}
+(\boldsymbol{\sigma}\cdot \mathbf{x})(\boldsymbol{\sigma}\cdot \mathbf{p})= \mathbf{x\cdot p} + i \boldsymbol{\sigma}\cdot (\mathbf{x}\times\mathbf{p}),\qquad 
+(\boldsymbol{\sigma}\cdot \mathbf{x})^2=|\mathbf{x}|^2=r^2,
+\end{equation}
+we can rewrite the dot product:
+\begin{align}
+\boldsymbol{\sigma}\cdot\mathbf{p} &= \frac{1}{r^2}(\boldsymbol{\sigma}\cdot \mathbf{x})(\boldsymbol{\sigma}\cdot \mathbf{x})(\boldsymbol{\sigma}\cdot \mathbf{p}) \nonumber 
+\\
+&= \frac{1}{r^2}(\boldsymbol{\sigma}\cdot \mathbf{x}) \left[ \mathbf{x\cdot p} + i \boldsymbol{\sigma}\cdot (\mathbf{x}\times\mathbf{p}) \right] \nonumber 
+\\
+&= (\boldsymbol{\sigma}\cdot\mathbf{\hat{r}}) \left[ \mathbf{\hat{r}\cdot p} + i\ \frac{\boldsymbol{\sigma}\cdot\mathbf{L}}{r} \right].
+\end{align}
+Now we need to write down how these operators act on the two-component wave function, namely,
+\begin{align}
+(\mathbf{\hat{r}\cdot p})\psi _{a,b} &= -i\frac{\partial \psi _{a,b}}{\partial r},\label{eq:rdotp}
+\\[2ex]
+(\boldsymbol{\sigma}\cdot\mathbf{L})\psi _{a,b} &= (\mathbf{J}^2-\mathbf{S}^2-\mathbf{L}^2)\psi _{a,b} \nonumber \\
+&= \left( j(j+1)-l(l+1)-\frac{3}{4} \right) \psi _{a,b} \nonumber \\
+&= (\kappa - 1)\psi _{a,b}, \label{eq:sigdotL}
+\end{align}
+and where the final operator $(\boldsymbol{\sigma}\cdot\mathbf{\hat{r}})$ acting on the spin-angular function will choose the other available angular momentum component and acts like,
+\begin{equation}\label{eq:sigdotr}
+(\boldsymbol{\sigma}\cdot\mathbf{\hat{r}})\mathcal{Y}_{\kappa m}=-\mathcal{Y}_{-\kappa m}.
+\end{equation}
+We can now apply~\eqref{eq:rdotp},~\eqref{eq:sigdotL} and~\eqref{eq:sigdotr} on~\eqref{eq:dirac1} to get the two ordinary differential equations to find the bound-state wave functions:
+\begin{equation}\label{eq:diracsingles}
+\begin{aligned}
+\left[ \frac{d}{dr}+\frac{\kappa}{r}\right] g_{n\kappa}(r) - \left[ E-V_{\lbrace n,p\rbrace}(r)+m+S_{\lbrace n,p\rbrace}(r)\right] f_{n\kappa}(r) &= 0,
+\\
+\left[ \frac{d}{dr}-\frac{\kappa}{r}\right] f_{n\kappa}(r) +\left[ E-V_{\lbrace n,p\rbrace}(r)-m-S_{\lbrace n,p\rbrace}(r)\right] g_{n\kappa}(r) &= 0.
+\end{aligned} 
+\end{equation}
+The coupled ordinary differential equations~\eqref{eq:diracsingles} are solved for the protons and neutrons numerically using a forth-order Runge-Kutta method with boundary conditions.
+
+
+%\subsubsection{Finding Bound State Energies and Wave functions}
+%
+%The coupled ordinary differential equations~\eqref{eq:diracsingles} are solved numerically using a forth-order Runge-Kutta method with boundary conditions. For the radial wave functions being calculated  the behavior at the origin and very far away must go to zero. For the numerical calculation we split the wave functions into an interior and exterior set of solutions to suppress the exponential behavior at large r. If this is unclear remember that the general solutions for a well of finite potential using the Schrodinger equations has an exponentially growing term that is ignored due to the normalization conditions. In order to assure a unique and thus bound-state energy the determinate of our set of interior and exterior solutions must be zero and we impose:
+%\begin{equation}
+%\begin{bmatrix}
+%g_{int} & -f_{int} \\
+%g_{ext} & -f_{ext}
+%\end{bmatrix}
+%= g_{ext
+%\end{equation}

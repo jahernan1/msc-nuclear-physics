@@ -1,0 +1,116 @@
+  % This is a "bare-bones" thesis template file.  For examples of how to
+% use a few more LaTeX features, look in the 'sample' folder.  Read
+% the User Guide for documentation of the 'fsuthesis' class features.
+
+\documentclass[12pt,expanded,copyright]{fsuthesis}
+
+% Additional packages may be loaded here.
+\usepackage{amsmath}
+\usepackage{amssymb}
+\usepackage{amsbsy}
+\usepackage{hhline}
+\usepackage{longtable}
+%\usepackage{sidecap}
+\usepackage{caption}
+%\usepackage{subcaption}
+\usepackage{slashed}
+\usepackage[overload]{textcase}
+\usepackage[pdftex]{graphicx}
+
+% To change back to the color option set colorlinks=true
+\usepackage{color}
+  \definecolor{mygreen}{rgb}{0,0.6,0}
+  \definecolor{myblue}{rgb}{0.3,0.2,0.8}
+  \definecolor{myred}{rgb}{0.8,0.1,0.1}
+\usepackage[colorlinks=false,bookmarks=true,pdfborder={0 0 0},
+    linkcolor=myblue,urlcolor=myred,citecolor=mygreen,
+    breaklinks=true,bookmarksnumbered=true]{hyperref}
+
+% Do NOT use 'geometry' or 'setspace' packages! They will
+% mess up the spacing provided by 'fsuthesis'.
+
+\title{The Weak Nuclear Form Factor:\protect\\ Nuclear Structure \& Coherent Elastic Neutrino-Nucleus Scattering}
+\author{Jesse A. Hern\'{a}ndez}
+\college{College of Arts and Sciences}
+\department{Department of Physics} % Delete if no department
+\manuscripttype{Thesis} % [Thesis, Dissertation, Treatise]
+\degree{Master of Science}                 
+\degreeyear{2019}
+\defensedate{August 13, 2019}
+
+%\subject{My Topic}
+%\keywords{keyterm1; keyterm2; keyterm3; ...}
+
+\committeeperson{Jorge Piekarewicz}{Professor Directing Thesis}
+\committeeperson{Simon Capstick}{Committee Member}
+\committeeperson{Ingo Ludwig Wiedenhoever}{Committee Member}
+
+\clubpenalty=9999
+\widowpenalty=9999
+
+\begin{document}
+\frontmatter
+\maketitle
+\makecommitteepage
+\newcommand{\cevns}{$\mathrm{CE\nu NS}$}
+\newcommand{\gmu}{\gamma ^{\mu}}
+%\renewcommand*{\thefootnote}{\fnsymbol{footnote}}
+
+\begin{dedication}
+\centering
+For my mother; without your immeasurable sacrifices and always encouraging me to reach for the stars, this would have never been possible.
+\end{dedication}
+
+%\begin{acknowledgments}
+
+%\end{acknowledgments}
+ 
+\tableofcontents
+\listoftables
+\listoffigures
+%\listofmusex
+
+%\begin{listofsymbols}
+%\end{listofsymbols}
+
+%\begin{listofabbrevs}
+%\end{listofabbrevs}
+
+\begin{abstract}
+
+The weak nuclear form factor is the final missing piece to complete our understanding of the structure of atomic nuclei and the Coherent Elastic Neutrino Nucleus Scattering (\cevns ) cross section. The weak form factor is dominated by the neutron distributions of the atomic nucleus, which are poorly known. The complex scalar and vector potentials within the nucleus are provided using a Relativistic Mean Field~(RMF) approach. These potentials are used to calculate the point neutron and proton distributions, and in conjunction with single-nucleon electric Sachs form factors---obtained from data---are used to predict the weak form factor. It is determined that the radius of the proton distributions agree within 1\% to the experimental values. The agreement of the proton distributions gives confidence that the predicted neutron distributions are computed correctly. It is also determined that to constrain the weak form factor, next-generation measurements need to be at $\leq 1\%$ error. The reduction to the \cevns\ cross-section due to the weak form factor at small momentum transfer is determined to be between $\sim 10-40 \%$ for neutron number, $N$, ranging from 20 to 126. The findings show that the precise measurement of the weak form factor is necessary for the accurate determination of the \cevns\ cross section and our comprehension of the nuclear structure as a whole, namely understanding the neutron distributions. Most importantly, the predicted quantities and estimated errors give guidance to experiments measuring the weak form factor. 
+
+\end{abstract}
+
+\mainmatter
+
+\input intro
+\input form
+\input results
+\input conclusion
+
+%\appendix
+%\input appendix1
+
+% You have your choice of bibliography sections, either
+% hand-crafted or BibTeX.
+
+% This is the "hand-crafted" bibliography/references section:
+%\begin{references}
+%\end{references}
+
+% Or use the BibTeX bibliography/references section below.  View the
+% file 'myrefs.bib' to get a feel for what these entries may look
+% like.  See the document in the 'sample' folder for more citation and
+% BibTeX examples.
+
+\renewcommand*{\bibname}{References}
+\bibliographystyle{ieeetr}
+%\nocite{*} % uncomment to print all sources
+\bibliography{myrefs}
+
+\begin{biosketch}
+Jesse Ant\'{o}nio Hern\'{a}ndez was born on June 10, 1994, on Long Island, New York. He attended Valley Stream South High School for early education where he graduated with honors in 2012. Following graduation, he was admitted and attended the State University of New York (SUNY) at Buffalo as a Bachelors of Science (B.Sc.) in physics. In 2016, he graduated from SUNY Buffalo with his B.Sc.\ in physics and a minor in mathematics. Following graduation from SUNY Buffalo, he attained a job tutoring students of introductory college classes in mathematics and physics while simultaneously applying to graduate programs in physics. In the summer of 2017, he was accepted as a graduate student at Florida State University (FSU) as a bridge student. At FSU he researched theoretical nuclear physics culminating in a successful Masters Thesis defense. In the Fall of 2019, he will be awarded his Masters of Science (M.Sc.) degree from FSU. He will continue in physics by pursuing his Doctor of Philosophy (Ph.D.) degree at FSU.  
+\end{biosketch}
+
+\end{document}
