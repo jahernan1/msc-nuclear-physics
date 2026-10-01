@@ -83,7 +83,7 @@ rho_s(r) = sum_occ (2j+1) / (4 pi r^2) * (g^2 - f^2)
 With [uv](https://docs.astral.sh/uv/) (recommended):
 
 ```bash
-git clone https://github.com/<you>/msc-nuclear-physics
+git clone https://github.com/jahernan1/msc-nuclear-physics
 cd msc-nuclear-physics
 uv venv --python 3.11
 source .venv/bin/activate
